@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Expo
+.expo/
+.expo-shared/
+.web/
+
+# Local env
+.env
+.DS_Store
+
+# Build outputs
+dist/
+build/
+
+# Editor dirs
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
