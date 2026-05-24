@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import { saveAndShareCSV } from '../storage/share';
 
 export default function Settings(){
   return (
@@ -16,6 +17,14 @@ export default function Settings(){
       <TouchableOpacity style={[styles.card,{marginTop:24}]} onPress={()=>{}}>
         <Text style={{color:'#ef4444', textAlign:'center'}}>Sign Out</Text>
       </TouchableOpacity>
+          <TouchableOpacity style={[styles.card,{marginTop:12}]} onPress={async ()=>{
+            const res = await saveAndShareCSV();
+            if(res?.ok){
+              Alert.alert('Export', 'Transactions exported successfully.');
+            }
+          }}>
+            <Text style={{color:'#0f172a', textAlign:'center', fontWeight:'700'}}>Export Transactions (CSV)</Text>
+          </TouchableOpacity>
     </View>
   );
 }
