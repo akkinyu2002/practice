@@ -23,7 +23,4 @@ npm install
 npm start
 ```
 
-Notes
-- This is a minimal scaffold: screens, a transaction card component, and AsyncStorage-based persistence are included.
-- Wire up icons, styling assets, and polish per the DESIGN.md files in the original attachments.
-- To add sample data, open the app and add transactions from the Add tab.
+
